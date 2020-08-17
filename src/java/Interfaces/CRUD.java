@@ -19,5 +19,4 @@ public interface CRUD {
     public boolean editarestudiante(Estudiante estudiante); // editar
     public boolean eliminarestudiante(int idestudiante); // eliminar
     
-    
 }
