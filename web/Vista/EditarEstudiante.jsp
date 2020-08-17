@@ -50,7 +50,7 @@
                             <td><input class="form-control" type="text" name="f_estado" value="<% out.println(estudiante.getEstado()); %>" maxlength="1" size="2" /></td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="text-center">
+                            <td colspan="2" class="text-center" >
                                 <input class="btn btn-primary" type="submit" value="Editar Estudiante" name="editar" />
                                 <input type="hidden" value="editarestudiante02" name="f_accion"/>
                                 <input type="hidden" value="<% out.print(estudiante.getIdestudiante()); %>" name="f_idestudiante">

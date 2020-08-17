@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <h1>Listado de Carreras</h1>
-            <a class="btn btn-success" href="ControladorCarrera?f_accion=agregarcarrera01">Agregar Nueva Carrera</a>
+             
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -53,7 +53,14 @@
                         </td>
                     </tr>
                     <%    }
-                    %>                    
+                    %>       
+                    
+                    <tr align="center">
+                       <td colspan="4">
+                    <a class="btn btn-success" href="index.html"> Atrás</a>
+                    <a class="btn btn-success" href="ControladorCarrera?f_accion=agregarcarrera01">Agregar Nueva Carrera</a>
+                       </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
