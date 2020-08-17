@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <h1>Listado de Estudiantes</h1>
-            <a class="btn btn-success" href="Controlador?f_accion=agregarestudiante01">Agregar Nuevo Estudiante</a>
+            
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -59,7 +59,14 @@
                         </td>
                     </tr>
                     <%    }
-                    %>                    
+                    %>    
+                    
+                    <tr align="center">
+                       <td colspan="8">
+                    <a class="btn btn-success" href="index.html"> Atrás</a>
+                    <a class="btn btn-success" href="Controlador?f_accion=agregarestudiante01">Agregar Nuevo Estudiante</a>
+                       </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

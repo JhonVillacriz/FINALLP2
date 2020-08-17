@@ -1,25 +1,39 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>Index</title>
         <link href="./CSS/bootstrap.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/Estilosparatabla.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="container">
-            <a class="btn btn-success btn-lg" href="Controlador?f_accion=listarestudiante">Listar Estudiantes</a>
-            <a class="btn btn-success btn-lg" href="ControladorCarrera?f_accion=listarcarrera">Listar Carreras</a>
-            <a class="btn btn-success btn-lg" href="ControladorCurso?f_accion=listarcurso">Listar Cursos</a>
-        
+            
+                          
+         <table border="2" align="center" class="azulino" style="margin: auto; display: table">
+            <thead>
+                <br>
+                <br>
+                <br>
+                <tr  align="center">
+                <th><i><center>MENU ESTUDIANTE</i></th>               
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><center><a class="btn btn-success btn-lg" href="Controlador?f_accion=listarestudiante">Listar Estudiantes</a> </tr>
+                <tr><td><center><a class="btn btn-success btn-lg" href="ControladorCarrera?f_accion=listarcarrera">Listar Carreras</a></td> </tr>            
+               <tr><td><center> <a class="btn btn-success btn-lg" href="ControladorCurso?f_accion=listarcurso">Listar Cursos</a></td> </tr>   
+               <tr align="center">
+                <td><a href="salida.jsp"> <input type="submit" value="salir" /> </a>
+                       </td>
+                </tr>
+            </tbody>
+        </table>
             
             
             
         </div>
     </body>
 </html>
+
