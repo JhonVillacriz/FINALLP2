@@ -8,6 +8,14 @@
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ControladorMatricula</servlet-name>
+        <servlet-class>Controlador.ControladorMatricula</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControladorMatricula</servlet-name>
+        <url-pattern>/ControladorMatricula</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
