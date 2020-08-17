@@ -19,7 +19,7 @@ import java.util.List;
  * @author MONARCA
  */
 public class CarreraDAO implements CRUDcarrera{
-    ConectaBd cn = new ConectaBd();
+     ConectaBd cn = new ConectaBd();
     Connection con;
     PreparedStatement pst;
     ResultSet rs;
@@ -48,23 +48,72 @@ public class CarreraDAO implements CRUDcarrera{
     }
 
     @Override
-    public Carrera buscarcarrrera(int idcarrera) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Carrera buscarcarrera(int idcarrera) {
+        String consulta = " select *  "
+                        + " from carrera  "
+                        + " where idcarrera = " + idcarrera + " ;";
+        try {
+            con = cn.getConnection();
+            pst = con.prepareStatement(consulta);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                e.setIdcarrera(rs.getInt("idcarrera"));
+                e.setNombre(rs.getString("nombre"));
+                
+                e.setEstado(rs.getString("estado"));
+            }
+        } catch (Exception e) {
+        }
+        
+        return e;
     }
 
     @Override
     public boolean agregarcarrera(Carrera carrera) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String consulta = " insert into carrera(nombre,  estado)  "
+                        + " values( "
+                        + "'"+ carrera.getNombre() +"', "
+                        
+                        + "'"+ carrera.getEstado() +"') ";
+        try {
+            con = cn.getConnection();
+            pst = con.prepareStatement(consulta);
+            pst.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
     }
 
     @Override
     public boolean editarcarrera(Carrera carrera) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String consulta = " update carrera "
+                        + " set "
+                        + " nombre = '"+ carrera.getNombre() +"', "
+                        
+                        + " estado = '"+ carrera.getEstado() +"' "
+                        + " where "
+                        + " idcarrera = " + carrera.getIdcarrera() + "; ";
+        try {
+            con = cn.getConnection();
+            pst = con.prepareStatement(consulta);
+            pst.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
     }
 
     @Override
     public boolean eliminarcarrera(int idcarrera) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String consulta = " delete from carrera "
+                        + " where "
+                        + " idcarrera = " + idcarrera + "; ";
+        try {
+            con = cn.getConnection();
+            pst = con.prepareStatement(consulta);
+            pst.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
     }
     
     

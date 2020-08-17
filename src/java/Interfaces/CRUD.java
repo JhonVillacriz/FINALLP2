@@ -18,4 +18,6 @@ public interface CRUD {
     public boolean agregarestudiante(Estudiante estudiante); // agregar
     public boolean editarestudiante(Estudiante estudiante); // editar
     public boolean eliminarestudiante(int idestudiante); // eliminar
+    
+    
 }

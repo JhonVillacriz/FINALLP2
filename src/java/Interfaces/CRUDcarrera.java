@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface CRUDcarrera {
   public List listarcarrera(); // listar
-    public Carrera buscarcarrrera(int idcarrera); // buscar
+    public Carrera buscarcarrera(int idcarrera); // buscar
     public boolean agregarcarrera(Carrera carrera); // agregar
     public boolean editarcarrera(Carrera carrera); // editar
     public boolean eliminarcarrera(int idcarrera); // eliminar
